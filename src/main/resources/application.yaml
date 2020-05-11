@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: demo-user
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://192.168.99.101/auth/realms/demo-app
+  cloud:
+    kubernetes:
+      config:
+        name: demo-user
+        namespace: default
